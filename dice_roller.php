@@ -17,10 +17,10 @@ add_action('rest_api_init', function () {
 });
 
 function dch_dice_roller(WP_REST_Request $request){
-    $amount = isset($request['amount']) ? $request['amount'] : 1; // of dice
-    $sides = isset($request['sides']) ? $request['sides'] : 6; // of die
-    $rolls = isset($request['rolls']) ? $request['rolls'] : 1; // number of rolls to return
-    $sort_min = isset($request['sort_min']) ? $request['sort_min'] : 4; // min number to sort
+    $amount = isset($request['amount']) ? (int)sanitize_text_field($request['amount']) : 1; // of dice
+    $sides = isset($request['sides']) ? (int)sanitize_text_field($request['sides']) : 6; // of die
+    $rolls = isset($request['rolls']) ? (int)sanitize_text_field($request['rolls']) : 1; // number of rolls to return
+    $sort_min = isset($request['sort_min']) ? (int)sanitize_text_field($request['sort_min']) : 4; // min number to sort
 
     if(!is_numeric($amount)){ return 'amount must be a number'; }
     if($amount<1) $amount=1;
