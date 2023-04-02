@@ -42,6 +42,7 @@ function dch_dice_roller(WP_REST_Request $request){
 
         //roll the dice
         for($i=0;$i<$amount;$i++){
+            
             $roll_value = mt_rand(1, $sides);
 
             $roll_set[] = $roll_value;
