@@ -1,3 +1,5 @@
-Dice Rolling API
+# Dice Rolling API
 
-Wordpress plugin
+Written as a Wordpress plugin
+
+Dice rolling API for board games
