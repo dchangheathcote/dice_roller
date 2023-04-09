@@ -80,7 +80,7 @@ function dch_dice_roller(WP_REST_Request $request){
     if(!is_numeric($amount)){ return 'amount must be a number'; }
     if($amount<1) $amount=1;
     if(!is_numeric($sides)){ return 'sides must be a number'; }
-    if($sides<6) $sides=1;
+    if($sides<6) $sides=6;
     if(!is_numeric($rolls)){ return 'sides must be a number'; }
     if($rolls<1) $rolls=1;
 
