@@ -73,8 +73,18 @@ function dch_dice_roller(WP_REST_Request $request){
                 'min' => $nr_sort
             ]
         ];
+
+        $nr_return = [
+            'rolls' => $nr_result,
+            'request' => [
+                'reroll'=>'true',
+                'amount_of_dice' => count($prev_roll),
+                'sides' => $sides,
+                'number_of_rolls' => 1
+            ]
+        ];
         // $nr_result[] = ['prev'=>$prev_roll, 'new'=>$new_roll];
-        return $nr_result;
+        return $nr_return;
     }
 
     if(!is_numeric($amount)){ return 'amount must be a number'; }
