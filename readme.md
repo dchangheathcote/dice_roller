@@ -15,6 +15,7 @@ https://wp.darrylch.com/wp-json/dch-json/v1/dice_roller?reroll=1&prev=6,2,5,6,1,
             "roll":[2,6,5,5,6,6,4,3,6,4,2,5,5,3],
             "previous_roll":[1,1,5,5,6,1,4,3,6,4,2,5,5,1],
             "roll_meta":{
+                "reroll_value":1,
                 "rerolls":4,
                 "roll_groups":{"2":2,"6":4,"5":4,"4":2,"3":2},
                 "min_value":4,
