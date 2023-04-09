@@ -67,6 +67,7 @@ function dch_dice_roller(WP_REST_Request $request){
             'roll'=> $new_roll,
             'previous_roll'=>$prev_roll,
             'roll_meta'=> [
+                'reroll_value'=>$reroll,
                 'rerolls'=>$rerolls,
                 'roll_groups'=> $nr_meta,
                 'min_value'=> $sort_min,
